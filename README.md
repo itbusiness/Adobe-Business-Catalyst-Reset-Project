@@ -17,3 +17,12 @@
 <p>This style sheet is the default style sheet served by Business Catalyst in order to pre-style a basic website.</p>
 <p>The major issue with this is that the styles often conflict with your own custom stylesheet and many "default" styles do not relect what you may want to appear in your website.</p>
 <p>There is also very little consistency in font-sizes, line-heights, margins, padding which make it very difficult to create a website which conforms to basic design principles and make a site look its best.</p>
+<h2>Components</h2>
+<p>This file resets all pre-defined styles to <a href="http://meyerweb.com/eric/tools/css/reset/" target="_blank">Eric Meyer's CSS Reset Sheet.</a></p>
+<p>This tool is a widely used stylesheet to resolve many browser inconsistencies. This has been used as the basis for much of this project but other issues and inconsistencies specific to Business Catalyst have also been addressed.</p>
+<h2>Current Fixes</h2>
+<p>To Date the following items have been addressed:</p>
+<ul>
+<li>Resolved incorrect use of .clear method and applied correct use of .clearfix</li>
+<li>Made all button styles consistent with use of image button in eCommerce template</li>
+</ul>
