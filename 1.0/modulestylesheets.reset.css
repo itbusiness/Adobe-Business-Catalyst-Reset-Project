@@ -1,0 +1,1813 @@
+/*--------------------------------------------------------------------------------------------
+	http://meyerweb.com/eric/tools/css/reset/ 
+	v2.0 | 20110126
+	License: none (public domain)
+--------------------------------------------------------------------------------------------*/
+
+	html, body, div, span, applet, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var,
+	b, u, i, center,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, canvas, details, embed, 
+	figure, figcaption, footer, header, hgroup, 
+	menu, nav, output, ruby, section, summary,
+	time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	}
+	/* HTML5 display-role reset for older browsers */
+	article, aside, details, figcaption, figure, 
+	footer, header, hgroup, menu, nav, section {
+		display: block;
+	}
+	body {
+		line-height: 1;
+	}
+	ol, ul {
+		list-style: none;
+	}
+	blockquote, q {
+		quotes: none;
+	}
+	blockquote:before, blockquote:after,
+	q:before, q:after {
+		content: '';
+		content: none;
+	}
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+
+/*--------------------------------------------------------------------------------------------
+	ADOBE BUSINESS CATALYST MODULESTYLESHEET RESET SHEET
+	Resets the default Module StyleSheet Version : 2009.08.10
+	
+	Updated: 200111617
+--------------------------------------------------------------------------------------------*/
+	
+	img, a img { border:0; } /* TODO: Remove */
+
+/*--------------------------------------------------------------------------------------------
+	FLOAT CLEARING
+	* The .clear class used by BC is more accurately refered to as the .clearfix method. This will prevent conflicts with other stylesheets.
+	*
+	* Resets the .clear class used by BC to its correct styling rules.
+	* .clear reference 	>> http://sonspring.com/journal/clearing-floats
+	
+	* Converts use of all .clear methods to the correct .clearfix method
+	* .clearfix reference 	>> http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified 
+--------------------------------------------------------------------------------------------*/	
+	
+/** BC CLEAR : TO REMOVE -----------------------------------------------------------------------*/
+	/*.clear {display: inline-block; }   
+	.clear:after {
+		content: ".";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+	}
+	* html .clear { height: 1%; }
+	.clear { display: block; }*/
+
+/** CLEAR: Adding correct rules for Clear Method  -----------------------------------------------------------------------*/	
+	.clear {
+		visibility: hidden;
+		display: block;
+		clear: both;
+		width: 0;
+		height: 0;
+		overflow: hidden;
+	}
+
+/** CLEAR PATCH: Patching Clear Method -----------------------------------------------------------------------*/	
+	
+	.blog-container .clear,
+	.shop-catalogue.clear,
+	.shop-product-large.clear,
+	.shop-main.clear,
+	.header.clear,
+	.body.clear,
+	.footer.clear,
+	.shop-product-small.clear {
+		visibility: visible;
+		width:auto;
+		height:auto;
+		overflow: visible;
+	}
+/** CLEARFIX: Adding (Updated) Clearfix  -----------------------------------------------------------------------*/
+	.clearfix:after {
+		visibility: hidden;
+		display: block;
+		clear: both;
+		height: 0;
+		font-size: 0;
+		content: " ";
+	}
+	* html .clearfix             { zoom: 1; } /* IE6 */
+	*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+/** CLEARFIX: Updating all use of the Clear Method to ClearFix -----------------------------------------------------------------------*/	
+	.blog-container > .wrapper.clear:after,
+	.shop-catalogue.clear:after,
+	.shop-product-large.clear:after,
+	.shop-main.clear:after,
+	.header.clear:after,
+	.body.clear:after,
+	.footer.clear:after,
+	.shop-product-small.clear:after {
+		visibility: hidden;
+		display: block;
+		clear: both;
+		height: 0;
+		font-size: 0;
+		content: " ";
+	}
+	
+	/*TODO: ADD IE FIXES */
+
+/*--------------------------------------------------------------------------------------------
+	BC STYLING FIXES
+	* TODO:
+	* FORMS
+	* BUTTONS
+	* CAPTCHA
+--------------------------------------------------------------------------------------------*/
+	form input[type="submit"], input.productSubmitInput {
+		font-weight: bold;
+		font-size: 12px;
+		
+		font-family: helvetica;
+		letter-spacing: 0.2px;
+		
+		padding:3px 1em 2px 1em;
+		border:1px solid #D7D7D7;
+		background-color: #F9F9F9;
+		
+		moz-border-radius: 4px;
+		border-radius: 4px;
+		
+		background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFF), to(#EFEFEF));
+		background: -webkit-linear-gradient(top, #FFF, #EFEFEF);
+		background: -moz-linear-gradient(top, #FFF, #EFEFEF);
+		background: -ms-linear-gradient(top, #323C45, #EFEFEF);
+		background: -o-linear-gradient(top, #323C45, #EFEFEF);
+	}
+
+/*--------------------------------------------------------------------------------------------
+	MODULE STYLESHEET RESET
+	* TODO:
+	* BUGS:
+	* Fix mystery bottom margin bug with textboxes
+--------------------------------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------------------------------------
+	Idioms
+	* TODO:
+--------------------------------------------------------------------------------------------*/	
+	
+	ul.mod {
+		list-style-image:none;
+		list-style-position: outside;
+		list-style-type: none;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	
+	ul.mod li {
+		list-style: none;
+	}
+	
+/*--------------------------------------------------------------------------------------------
+	WEBFORMS
+	* TODO:
+--------------------------------------------------------------------------------------------*/	
+	
+	ul.form {
+		margin: 0;
+		padding: 0;
+	}
+	
+	ul.form li {
+		list-style: none;
+		margin: 0 0 18px 0;					margin: 0;
+	}
+	
+	ul.form li label {
+		color: #888;						color: inherit;
+		display: block;						display: inline;
+	}
+	
+	div.form div.item, div.webform div.item {
+		padding: 9px;						padding:0;
+	}
+	
+	cat_button {}
+	
+	input.cat_textbox,
+	textarea.cat_listbox,
+	select.cat_dropdown,
+	select.cat_listbox {
+		width: 300px;					
+	}
+	
+	.cat_dropdown_small {
+		width: 200px;
+	}
+	
+	.cat_dropdown_smaller {
+		width: 150px;
+	}
+	
+	.cat_textbox_small, .cat_listbox_small {
+		width: 200px; /* DON'T TOUCH THIS */
+	}
+	
+	.cat_listbox {
+		height: 120px;
+		width: 300px;
+	}
+	
+	table.webform,
+	table.reporting {
+		border-collapse:collapse;
+		border-spacing:0;
+		width: 100%;
+	}
+	
+	table.webform td {
+		line-height: 24px;					line-height: inherit;
+		padding: 6px;						padding:0;
+	}
+	
+	.form label, .webform label {
+		font-size: 11px;					font-size: 100%;
+	}
+	
+	.form input, .webform input {
+		margin-right: 3px;					margin-right: 0;
+	}
+	
+/*--------------------------------------------------------------------------------------------
+	SYSTEM MESSAGES
+	* TODO:
+--------------------------------------------------------------------------------------------*/	
+	
+	.system-message, .system-error-message {
+		background-color: #f9f9f9;				background-color: transparent;
+		border: 1px solid #eee;					border: 0;
+		color: #666;						color: inherit;
+		margin: 18px;						margin: 0;
+		min-height: 110px;					min-height: inherit;
+		height: auto !important;
+		height: 110px;
+		padding: 36px 36px 36px 180px;				padding:0;
+	}
+	
+	.system-message h1, .system-error-message h1 {
+		color: #000;						color: inherit;
+		margin: 0 0 18px 0;					margin: 0;
+	}
+	
+	.system-message a:link, .system-error-message a:link {
+		color: #1969bc;						color: inherit;
+	}
+	
+	.ok {
+		background: #E9FBE3;					background: none;
+		color: #21A347;						color: inherit;
+		margin-bottom: 18px;					margin-bottom: 0;
+	}
+	
+	.error {
+		background: #FBE3E4;					background: none;
+		color: #D12F19;						color: inherit;
+		margin-bottom: 18px;					margin-bottom: 0;
+	}
+	
+/*--------------------------------------------------------------------------------------------
+	ANNOUNCEMENTS
+	* TODO:
+--------------------------------------------------------------------------------------------*/	
+	
+	.announcement-list {
+		font-size: 11px;					font-size: 100%;
+	}
+	
+	.announcement-list h2 {
+		font-size: 14px;					font-size: 100%;
+		margin: 0 0 3px 0;					margin: 0;
+	}
+	
+	.announcement-list span.date {
+		font-size: 10px;					font-size: 100%;
+		font-weight: normal;
+		margin: 0 0 0 6px;					margin: 0;
+	}
+	
+	.announcement-details span.date {
+		display: block;						display: inline;
+		font-size: 10px;					font-size: 100%;
+		font-weight: normal;					
+		margin-bottom: 18px;					margin: 0;
+	}
+	
+/*--------------------------------------------------------------------------------------------
+	BLOGS
+	* TODO:
+--------------------------------------------------------------------------------------------*/	
+	
+	/* NOTE: div.post-list exists in FORUMS as well */
+	
+	
+	.blog-list {
+		background: #f9f9f9;					background: none;
+		border: 1px solid #eee;					border: 0;
+		color: #000;						color: inherit;
+		font-size: 11px;					font-size: 100%;
+		margin: 0 0 18px;					margin: 0;
+		padding: 18px;						padding:0;
+	}
+	
+	.blog-list h2 {
+		font-size: 18px;					font-size: 100%;
+		margin: 0 0 3px 0;					margin: 0;
+	}
+	
+	.blog-list span {
+		color: #888;						color: inherit;
+	}
+	
+	.blog-container h1 {
+		font-size: 36px;					font-size: 100%;
+		line-height: 40px;					line-height: inherit;
+		margin: 0 0 6px 0;					margin: 0;
+	}
+	
+	.blog-container p.description {
+		margin: 0 0 36px;					margin: 0;
+	}
+	
+	.blog-post h2.post-title {
+		border-bottom: 1px solid #ccc;					border-bottom: 0;
+		font-size: 18px;						font-size: 100%;
+		margin: 0;					margin: 0;
+		padding: 0 0 3px 0;						padding:0;
+	}
+	
+	.blog-post .post-details {
+		color: #888;						color: inherit;
+		font-size: 11px;					font-size: 100%;
+		margin: 0 0 18px;					margin:0;
+	}
+	
+	.blog-container .post-list {
+		float: left;						/*TODO: See Floats */
+		width: 69%;						width:50%; /*TODO: FIX? */
+	}
+	
+	.blog-post .post-body {
+		margin: 0 0 36px;					margin: 0;
+	}
+	
+	.comment-list {
+		background: #f9f9f9;					background: none;
+		border: 1px solid #eee;					border: 0;
+		margin-bottom: 36px;					margin: 0;
+		padding: 18px;						padding:0;
+	}
+	
+	.comment-list h5 {
+		font-size: 14px;					font-size: 100%;
+		margin: 0 0 18px;					margin: 0;
+	}
+	
+	.comment-list input#Captcha {
+		width: 300px;
+	}
+	
+	.comment-list textarea.cat_listbox_small {
+		height: 120px;
+		width: 100%;
+	}
+	
+	.blog-comment-container {
+		border: 1px solid #e9e9e9;					border: 0;
+		margin: 0 0 18px;					margin: 0;
+	}
+	
+	.blog-comment-container  .comment-details {
+		background: #eee;					background: none;
+		font-size: 11px;					font-size: 100%;
+		padding: 6px;						padding:0;
+	}
+	
+	.blog-comment-container .comment {
+		background: #fff;					background: none;
+		padding: 9px;						padding:0;
+	}
+	
+	span.flag {
+		margin: 0 6px;					margin: 0;
+		vertical-align: middle;
+	}
+	
+	input#fullname, input#website, input#emailaddress {
+		width: 300px;
+	}
+	
+	textarea.comment {
+		height: 160px;
+		width: 100%;
+	}
+	
+	.forum-registration textarea.comment {
+		height: 70px;
+		width: 270px;
+	}
+	
+	.post-body .links {
+		font-size: 11px;					font-size: 100%;
+	}
+	
+	.blog-container .side-panel {
+		float: right;					/*TODO: Fix */
+		width: 27%;					/*TODO: Fix */
+	}
+	
+	.side-panel h4 {
+		font-size: 12px;					font-size: 100%;
+		margin: 0 0 9px;					margin: 0;
+	}
+	
+	.BlogTagCloud {
+		margin: 0 0 18px;					margin: 0;
+	}
+	
+	.BlogRecentPost ul, .BlogTagList ul, .BlogPostArchive ul {
+		margin: 0;
+		padding: 0;
+	}
+	
+	.BlogRecentPost li, .BlogTagList li, .BlogPostArchive li {
+		font-size: 11px;					font-size: 100%;
+		list-style: none;
+		margin: 0 0 9px;					margin: 0;
+	}
+	
+	p.page-nav {
+		text-align: center;
+	} 
+	
+	p.page-nav a {
+		margin: 0 9px;					margin: 0;
+	}
+	
+	.blog-post dl {
+		background: #f9f9f9;					background: none;
+		border: 1px solid #eee;					border: 0;
+		margin: 0 0 18px;					margin: 0;
+		padding: 18px;						padding:0;
+	}
+	
+	.blog-post dt {
+		color: #000;						color: inherit;
+	}
+	
+	.blog-post dd {
+		margin: 0 0 9px;					margin: 0;
+	}
+	
+/*--------------------------------------------------------------------------------------------
+	BOOKINGS
+	* TODO:
+--------------------------------------------------------------------------------------------*/	
+	
+	.booking-list {
+		margin: 0 0 9px;					margin: 0;
+	}
+	
+	.booking-list span.date {
+		margin: 0 9px 0 0;					margin: 0;
+	}
+	
+	.booking-container h1, .form-container h2 {
+		margin: 0 0 18px;					margin: 0;
+	}
+	
+	.form-container {
+		background: #f9f9f9;					background: none;
+		border: 1px solid #eee;					border: 0;
+		padding: 18px;						padding:0;
+	}
+	
+	.form-container input#FirstName, .form-container input#LastName, .form-container input#EmailAddress, .form-container input#Company, .form-container input#WorkPhone {
+		width: 260px;
+	}
+	
+	.go-back {
+		margin: 18px 0;					margin: 0;
+	}
+	
+/*--------------------------------------------------------------------------------------------
+	CALENDAR
+	* TODO:
+--------------------------------------------------------------------------------------------*/	
+	
+	div.select-month-year {
+		padding: 9px 0;						padding:0;
+	}
+	
+	table.module-calendar {
+		border: 1px solid #888;					border: 0;
+		border-collapse: collapse;
+		table-layout: fixed;
+		width: 100%;
+	}
+	
+	table.module-calendar td {
+		border: 1px solid #d7d7d7;				border: 0;
+		font-size: 11px;					font-size: 100%;
+		height: 80px;
+		overflow: hidden;
+		padding: 0;						padding:0;
+		vertical-align: top;
+	}
+	
+	table.module-calendar td span {
+		background: #f7f7f7;					background: none;
+		color: #333;						color: inherit;
+		display: block;						display: inline;
+		font-size: 11px;					font-size: 100%;
+		padding: 0 2px;						padding:0;
+		text-align: right;					text-align: inherit;
+	}
+	
+	tr.day-of-week td {
+		background: #d7d7d7;					background: none;
+		color: #000;						color: inherit;
+		font-size: 12px;					font-size: 100%;
+		font-weight: bold;					font-weight: inherit;
+		height: 18px;
+		text-align: center;					text-align: inherit;
+		vertical-align: middle;					vertical-align: baseline; /*TO CHECK*/
+	}
+	
+	table.module-calendar td.events span {
+		background: #2BABFA;					background: none;
+		color: #fff;						color: inherit;
+		font-weight: bold;					font-weight: inherit;
+	}
+	
+	table.module-calendar td.events {
+		background: #EEF5FA;					background: none;
+	}
+	
+	table.module-calendar td ul {
+		margin: 9px 0;						margin: 0;
+		padding-left: 24px;					padding-left:0;
+	}
+	
+	table.module-calendar td.last-month {
+		background: #eee;					background: none;
+	}
+	
+	table.module-calendar td.next-month {
+		background: #eee;					background: none;
+	}
+	
+/*--------------------------------------------------------------------------------------------
+	CATALOGUES & PRODUCTS
+	* TODO:
+	* BUGS:
+	* 2x <br /> inside .footer.clear
+--------------------------------------------------------------------------------------------*/	
+	
+	.shop-catalogue {
+		background: #fff;					background: none;
+		border: 1px solid #ccc;					border: 0;
+		float: left;
+		height: 180px;
+		margin: 0 6px 6px 0;					margin: 0;
+		overflow: hidden;
+		width: 180px;
+	}
+	
+	.shop-catalogue h4 {
+		font-size: 12px;					font-size: 100%;
+		height: 27px;
+		line-height: 27px;					line-height: inherit;
+		margin: 0;					margin: 0;
+		text-indent: 9px;
+	}
+	
+	.shop-catalogue h4 a {
+		color: #1969bc;						color: inherit;
+		text-decoration: none;
+	}
+	
+	.shop-catalogue .image {
+		/* Image size should be 150px by 120px */
+		height: 120px;
+		margin: 0 auto;					margin: 0;
+		overflow: hidden;
+		padding: 15px;						padding:0;
+		text-align: center;
+	}
+	
+	.shop-main {
+		margin-top: 18px;					margin: 0;
+	}
+	
+	.shop-main .header {
+		border-bottom: 1px solid #eee;					border-bottom: 0;
+		height: 27px;						height: auto;
+		line-height: 27px;					line-height: inherit;
+		margin: 0 0 18px;					margin: 0;
+	}
+	
+	.shop-main .breadcrumbs {
+		float: left;
+		width: 40%;
+	}
+	
+	.shop-main .cart-summary {
+		float: right;
+		width: 40%;
+	}
+	
+	.shop-main .description ul {
+		margin: 0 0 0 18px;					margin: 0;
+		padding: 0;
+	}
+	
+	.shop-main .description li {
+		list-style: square;
+	}
+	
+	table.cartSummaryTable {
+		border-collapse:collapse;
+		border-spacing:0;	
+		font-size: 12px;					font-size: 100%;
+		float: right;
+	}
+	
+	td.cartSummaryItem {
+		padding: 0;
+	}
+	
+	a.cartSummaryLink {
+		margin: 0 0 0 18px;					margin: 0;
+	}
+	
+	.shop-main ul {
+		margin: 0;					margin: 0;
+		padding: 0;
+	}
+	
+	.shop-main li {
+		list-style: none;
+	}
+	
+	table.catalogueTable {
+		border-collapse:collapse;
+		border-spacing:0;	
+		width: 100%;
+		margin: 0 0 18px;					margin: 0;
+	}
+	
+	table.catalogueTable td {
+		padding: 0;
+	}
+	
+	table.productTable {
+		border-collapse:collapse;
+		border-spacing:0;	
+		table-layout: fixed;
+		width: 100%;
+	}
+	
+	table.productTable td {
+		padding: 3px;						padding:0;
+	}
+	
+	.shop-product-small {
+		background: #fff;					background: none;
+		border: 1px solid #ddd;					border: 0;
+		color: #666;						color: inherit;
+	}
+	
+	.shop-product-small h5 {
+		font-size: 12px;					font-size: 100%;
+		font-weight: normal;
+		margin: 0;						margin: 0;
+		min-height: 36px;					min-height:inherit;
+		padding: 18px 18px 6px;					padding:0;
+	}
+	
+	.shop-product-small h4 a {
+		color: #1969bc ;					color: inherit;
+	}	
+	
+	.shop-product-small h5 a {
+		text-decoration: none;
+	}
+	
+	.shop-product-small ul {
+		background: #f9f9f9;					background: none;
+		padding: 18px;						padding:0;
+	}
+	
+	.shop-product-small ul li {
+		font-size: 11px;					font-size: 100%;
+		margin: 0 0 6px;					margin: 0;
+	}
+	
+	.shop-product-small li.price {
+		font-size: 11px;					font-size: 100%;
+	}
+	
+	.shop-product-small li.price strong {
+		font-size: 14px;					font-size: 100%;
+		margin-left: 6px;					margin: 0;
+	}
+	
+	.shop-product-small li.stock {
+		font-size: 11px;					font-size: 100%;
+	}
+	
+	.shop-product-small li.stock strong {
+		color: #666;							color: inherit;
+		margin-left: 3px;					margin: 0;
+	}
+	
+	.shop-product-small .image {
+		height: 120px;
+		margin: 0 auto 9px;					margin: 0;
+		overflow: hidden;
+		width: 120px;
+		text-align: center;
+	}
+	
+	.image a, td.actions a {
+		border: none !important;
+	}
+	
+	.shop-product-small li.quantity {
+		line-height: 30px;					line-height: inherit;
+	}
+	
+	li.quantity img {
+		position: relative;
+		top: 8px;
+		/* or vertical-align: middle; */
+	}
+	
+	.shop-product-small li.quantity input.productTextInput {
+		width: 50px;
+	}
+	
+	.shop-product-small li.quantity input.productSubmitInput {
+	}
+	
+	.shop-product-large {
+		background: #fff;					background: none;
+		border: 1px solid #eee;					border: 0;
+		color: #666;							color: inherit;
+		margin: 0 0 18px;					margin: 0;
+		min-width: 240px;
+		overflow: hidden;
+	}
+	
+	.shop-product-large h1 {
+		color: #000;							color: inherit;
+		font-size: 14px;					font-size: 100%;
+	}
+	
+	.shop-product-large .image {
+		margin-left: 36%;					margin-left: 0;
+		min-height: 360px;
+		height: auto !important; /* for modern browsers */
+		height: 360px; /* for IE5.x and IE6 */		
+		padding: 18px;						padding:0;
+		text-align: center;
+	}
+	
+	.shop-product-large .shop-product-small .image {
+		margin: 0;					margin: 0;
+		min-height: 160px; 
+		height: auto !important; /* for modern browsers */
+		height: 160px; /* for IE5.x and IE6 */		
+		padding: 18px;						padding:0;
+		text-align: center;
+		width: auto;
+	}
+	
+	.shop-product-large .shop-product-small ul {
+		padding: 9px;						padding:0;
+	}
+	
+	.shop-product-large .shop-product-small ul, .shop-product-large .shop-product-small li  {
+		margin: 0;
+	}
+	
+	.shop-product-large li.price {
+		font-size: 14px;					font-size: 100%;
+	}
+	
+	.shop-product-large li.instock {
+		font-size: 10px;					font-size: 100%;
+	}
+	
+	.shop-product-large li.quantity input.productTextInput {
+		width: 50px;
+	}
+	
+	td.productItem .comment-form input#Captcha {
+		width: 300px;
+	}
+	
+	.poplets {
+		border-top: 1px solid #eee;					border: 0;
+		margin-top: 36px;					margin: 0;
+		padding: 9px 0;						padding:0;
+	}
+	
+	.poplets img {
+		border: 1px solid #ddd;					border: 0;
+	}
+	
+	table.productPoplets {
+		border-collapse:collapse;
+		border-spacing:0;	
+		margin: 0 auto;					margin: 0;
+	}
+	
+	.shop-product-large .details {
+		background: #f9f9f9;					background: none;
+		float: left;
+		min-height: 360px;
+		height: auto !important; /* for modern browsers */
+		height: 360px; /* for IE5.x and IE6 */	
+		padding: 18px;						padding:0;
+		width: 30%;
+	}
+	
+	.shop-product-large ul {
+		margin: 0 0 36px;					margin: 0;
+		padding: 0;						padding:0;
+	}
+	
+	.shop-product-large li {
+		margin: 9px 0;					margin: 0;
+	}
+	
+	.shop-cart .breadcrumbs {
+		margin: 0 0 18px;					margin: 0;
+	}
+	
+	table.cart {
+		background: #fff;					background: none;
+		border-collapse:collapse;
+		border-spacing:0;	
+		border: 1px solid #ddd;					border: 0;
+		font-size: 11px;					font-size: 100%;
+		width: 100%;
+	}
+	
+	table.cart td {
+		vertical-align: top; /*to make sure the div stack line up at the top */
+	}
+	
+	table.cart a {
+		color: #1969bc;							color: inherit;
+	}
+	
+	table.cart th, table.cart td {
+		color: #666;							color: inherit;
+		padding: 9px;						padding:0;
+	}
+	
+	tr.val td {
+		border-bottom: 1px solid #eee;					border-bottom: 0;
+	}
+	
+	tr.shipping td {
+		border-bottom: 1px solid #ddd;					border: 0;
+	}
+	
+	tr.discount td.quantity, tr.shipping td.quantity {
+		text-align: right;
+	}
+	
+	td.quantity input.update {
+		margin: 0 0 0 3px;					margin: 0;
+	}
+	
+	table.cart th {
+		background: #f9f9f9;					background: none;
+		border-bottom: 1px solid #eee;					border-bottom: 0;
+		color: #000;							color: inherit;
+		font-size: 11px;					font-size: 100%;
+		font-weight: normal;
+		text-align: left;
+	}
+	
+	input.cartInputText {
+		width: 70px;
+	}
+	
+	input#DiscountCode, input#GiftVoucher {
+		width: 70px;
+	}
+	
+	select.shippingDropDown {
+		width: 150px;
+	}
+	
+	table.cart th.quantity {
+		text-align: right;
+	}
+	
+	table.cart td.quantity {
+		text-align: right;
+	}
+	
+	.productitemcell {
+		height: 23px;
+		line-height: 20px;					line-height: inherit;
+		margin: 0 0 3px 0;					margin: 0;
+		overflow: hidden;
+	}
+	
+	table.cart td.actions {
+		text-align: right;
+	}
+	
+	table.cart td.actions a {
+		font-size: 12px;					font-size: 100%;
+		font-weight: bold;					font-weight: inherit;
+		margin: 0 18px 0 0;					margin: 0;
+		text-decoration: none;
+	}
+	
+	a#catshopclear {
+		font-size: 10px;					font-size: 100%;
+		font-weight: normal;
+	}
+	
+	table.cart strong {
+		font-size: 14px;					font-size: 100%;
+	}
+	
+	.shop-form {
+		margin: 0 0 18px;					margin: 0;
+	}
+	
+	.shop-form ul.form {
+		background: #f9f9f9;					background: none;
+		border: 1px solid #eee;					border: 0;
+		padding: 18px;						padding:0;
+	}
+	
+	.shop-form label {
+		font-size: 11px;					font-size: 100%;
+	}
+	
+	.shop-form ul.form li {
+		margin: 0;					margin: 0;
+		padding: 9px 0;						padding:0;
+	}
+	
+	.shop-form li.last {
+		border-top: 1px solid #eee;					border: 0;
+	}
+	
+	input.PaymentMethodType {
+		margin: 0 6px 0 0;					margin: 0;
+	}
+	
+	.shop-form ul.form input.cat_textbox,
+	.shop-form ul.form select.cat_dropdown,
+	.shop-form ul.form textarea.cat_listbox {
+		width: 260px;
+	}
+	
+	.shop-form textarea.cat_listbox {
+		height: 100px;
+	}
+	
+	.shop-receipt, .shop-quote-receipt {
+		background: #f9f9f9;					background: none;
+		border: 1px solid #eee;					border: 0;
+		margin: 18px;					margin: 0;
+		padding: 18px;						padding:0;
+	}
+	
+	.shop-receipt h1, .shop-quote-receipt h1 {
+		border-bottom: 1px solid #ccc;					border: 0;
+		padding: 0 0 3px;						padding:0;
+	}
+	
+	.shop-receipt h2, .shop-quote-receipt h2 {
+		font-size: 12px;					font-size: 100%;
+		font-weight: normal;
+	}
+	
+/*--------------------------------------------------------------------------------------------
+	CUSTOMER CASES
+	* TODO:
+--------------------------------------------------------------------------------------------*/	
+	
+	table.case-list {
+		border-collapse:collapse;
+		border-spacing:0;	
+		margin: 0;
+		width: 100%;
+	}
+	
+	table.case-list td {
+		padding: 6px;						padding:0;
+	}
+	
+	table.case-list td.subject,
+	table.case-list td.category {
+		width: 40%;
+	}
+	
+	table.case-list td.status {
+		width: 20%;
+	}
+	
+	table.case-details {
+		background: #f9f9f9;					background: none;
+		border-collapse:collapse;
+		border-spacing:0;	
+		border: 1px solid #eee;					border: 0;
+		width: 100%;
+	}
+	
+	table.case-details td {
+		padding: 6px;						padding:0;
+	}
+	
+	table.case-details tr.odd td {
+		background: #fff;					background: none;
+	}
+	
+	table.case-details td.var {
+		color: #888;						color: inherit;
+		text-align: right;
+		width: 130px;
+	}
+	
+	table.case-details td.val {
+		color: #000;
+	}
+	
+/*--------------------------------------------------------------------------------------------
+	CUSTOMER ORDERS
+	* TODO:
+--------------------------------------------------------------------------------------------*/	
+	
+	table.border {
+		border-collapse:collapse;
+		border-spacing:0;	
+		border-right: 1px solid #eee;					border-right: 0;
+		border-bottom: 1px solid #eee;					border-bottom: 0;
+	}
+	
+	table.border td {
+		border-top: 1px solid #eee;					border-top: 0;
+		border-left: 1px solid #eee;					border-left: 0;
+	}
+	
+	table.border span {
+		color: #888;						color: inherit;
+	}
+	
+	table.order-list {
+		border-collapse:collapse;
+		border-spacing:0;	
+		width: 100%;
+	}
+	
+	table.order-list td {
+		border: 1px solid #eee;					border: 0;
+	}
+	
+	table.order-list a {
+		margin: 0 9px 0 0;					margin: 0;
+	}
+	
+	table.order-list span.number {
+		font-size: 11px;					font-size: 100%;
+	}
+	
+/*--------------------------------------------------------------------------------------------
+	COMMENTS
+	* TODO:
+--------------------------------------------------------------------------------------------*/	
+	
+	.comment-container {
+		background: #f9f9f9;					background: none;
+		border: 1px solid #eee;					border: 0;
+		margin: 0 0 18px;					margin: 0;
+	}
+	
+	.comment-container .header {
+		background: #eee;					background: none;
+		font-size: 11px;					font-size: 100%;
+		padding: 6px 18px;					padding:0;
+	}
+	
+	.comment-container span.name {
+		color: #000;						color: inherit;
+	}
+	
+	.comment-container span.rating {
+		margin: 0 9px;						margin: 0;
+		vertical-align: middle;					vertical-align: baseline;
+	}
+	
+	.comment-container .content {
+		padding: 18px;						padding:0;
+	}
+	
+	.comment-form {
+		background: #f9f9f9;					background: none;
+		border: 1px solid #eee;					border: 0;
+		color: #666;						color: inherit;
+		margin: 0 0 18px;					margin: 0;
+		padding: 18px;						padding:0;
+	}
+	
+	.comment-form h3 {
+		font-size: 14px;					font-size: 100%;
+		margin: 0 0 18px;					margin: 0;
+	}
+	
+	.comment-form h5 {
+		color: #666;						color: inherit;
+		font-size: 14px;					font-size: 100%;
+		margin: 0 0 18px;					margin: 0;
+	}
+	
+	.comment-form input.cat_textbox_small,
+	.comment-form textarea {
+		width: 300px;
+	}
+	
+	.comment-form textarea {
+		height: 120px;
+	}
+	
+/*--------------------------------------------------------------------------------------------
+	FAQS
+	* TODO:
+--------------------------------------------------------------------------------------------*/	
+	
+	table.faq-search {
+		background: #f9f9f9;					background: none;
+		border-collapse:collapse;
+		border-spacing:0;	
+		border: 1px solid #eee;					border: 0;
+		margin: 0 0 18px 0;					margin: 0;
+		width: 100%;
+	}
+	
+	table.faq-search label {
+		color: #888;						color: inherit;
+	}
+	
+	table.faq-search td {
+		border-collapse:collapse;
+		border-spacing:0;	
+		padding: 9px;						padding:0;
+	}
+	
+	table.faqresultstable {
+		background: #fff;					background: none;
+		border-collapse:collapse;
+		border-spacing:0;	
+		border: 1px solid #eee;					border: 0;
+		width: 100%;
+	}
+	
+	table.faqresultstable td {
+		color: #666;						color: inherit;
+		padding: 9px;						padding:0;
+	}
+	
+	table.faqresultstable a {
+		color: #1969bc;						color: inherit;
+	}
+	
+	table.faqresultstable td.faqresultstableinfo {
+		background: #f9f9f9;					background: none;
+		color: #888;						color: inherit;
+		font-size: 10px;					font-size: 100%;
+		padding: 3px 18px;					padding:0;
+		text-align: right;
+	}
+	
+	table.faqresultstable td.faqresultstablecount {
+		padding-left: 18px;					padding-left:0;
+		width: 10px;
+	}
+	
+	td.faqresultstablehead {
+		background: #fff;					background: none;
+		border-collapse:collapse;
+		border-spacing:0;	
+		border-bottom: 1px solid #eee;				border-bottom: 0;
+		color: #000;						color: inherit;
+		font-weight: bold;					font-weight: inherit;
+	}
+	
+/*--------------------------------------------------------------------------------------------
+	FORUMS
+	* TODO:
+--------------------------------------------------------------------------------------------*/	
+	
+	/* NOTE: div.post-list exists in BLOG as well */
+	
+	.forum-container h1 {
+		font-size: 24px;					font-size: 100%;
+	}
+	
+	table.topic-list, div.forum-posts-container div.post-list, div.forum-registration {
+		color: #666;						color: inherit;
+	}
+	
+	div.forum-posts-container div.post-list a, div.forum-registration a {
+		color: #1969bc;						color: inherit;
+	}
+	
+	div.forum-registration h2 {
+		color: #000;						color: inherit;
+	}
+	
+	table.forum {
+		background: #f9f9f9;					background: none;
+		border-collapse:collapse;
+		border-spacing:0;	
+		border: 1px solid #eee;					border: 0;
+		margin: 0;
+		width: 100%;	
+	}
+	
+	table.forum td {
+		font-size: 11px;					font-size: 100%;
+		padding: 9px;						padding:0;
+		vertical-align: top;
+	}
+	
+	table.forum td.topics {
+		border-left: 1px solid #eee;					border-left: 0;
+		border-right: 1px solid #eee;					border-right: 0;
+		width: 90px;
+	}
+	
+	table.forum td.posts {
+		border-right: 1px solid #eee;						border-right: 0;
+		width: 90px;
+	}
+	
+	table.forum td.lastpost {
+		border-left: 1px solid #eee;						border-left: 0;
+		width: 180px;
+	}
+	
+	table.forum .icon {
+		float: left;
+		width: 50px;
+	}
+	
+	table.forum .forum {
+		margin: 0 0 0 50px;					margin: 0;
+	}
+	
+	table.forum h3 {
+		margin: 0;
+	}
+	
+	table.forum h3 a {
+		text-decoration: none;
+	}
+	
+	ul.cap-top,
+	ul.cap-bottom {
+		font-size: 11px;					font-size: 100%;
+		height: 30px;
+		margin: 0 0 18px;					margin: 0;
+		padding: 0;						padding:0;
+	}
+	
+	ul.cap-bottom {
+		margin: 18px 0 0;					margin: 0;
+	}
+	
+	ul.cap-top li,
+	ul.cap-bottom li {
+		display: block;	
+		line-height: 30px;					line-height: inherit;
+		list-style: none;	
+	}
+	
+	ul.cap-top li.user,
+	ul.cap-bottom li.nav-page {
+		float: left;
+		width: 200px;
+	}
+	
+	ul.cap-top li.actions,
+	ul.cap-bottom li.actions
+	{
+		float: right;
+		font-size: 12px;					font-size: 100%;
+		text-align: right;
+		width: 350px;
+	}
+	
+	ul.cap-top li.actions a,
+	ul.cap-bottom li.actions a{
+		float: right;
+		margin: 0;					margin: 0;
+		padding: 0 9px;						padding:0;
+	}
+	
+	table.topic-list {
+		background: #f9f9f9;					background: none;
+		border-collapse:collapse;
+		border-spacing:0;	
+		border-left: 1px solid #eee;					border-left: 0;
+		border-right: 1px solid #eee;					border-right: 0;
+		width: 100%;
+	}
+	
+	table.topic-list th {
+		background: #ddd;					background: none;
+		border: 1px solid #ddd;					border: 0;
+		color: #000;						color: inherit;
+		font-size: 10px;					font-size: 100%;
+		padding: 6px;						padding:0;
+		text-align: left;
+	}
+	
+	table.topic-list .name {
+		font-weight: bold;					font-weight: inherit;
+		width: 60%;
+	}
+	
+	table.topic-list .name .icon {
+		float: left;
+		width: 30px;
+	}
+	
+	table.topic-list .replies,
+	table.topic-list .views {
+		font-size: 10px;					font-size: 100%;
+		text-align: center;
+		width: 10%;
+	}
+	
+	table.topic-list .date {
+		font-size: 10px;					font-size: 100%;
+		text-align: right;
+		width: 20%;
+	}
+	
+	table.topic-list td {
+		padding: 0;						padding:0;
+	}
+	
+	table.topic-list a {
+		color: #1969bc;						color: inherit;
+	}
+	
+	table.topic { 							/* BUG - Double Semi-Colin*/
+		border-collapse:collapse;
+		border-spacing:0;	
+		border-bottom: 1px solid #eee;;					border: 0;
+		margin: 0;
+		width: 100%;
+	}
+	
+	table.topic td {
+		padding: 9px;						padding:0;
+	}
+	
+	table.topic td.name,
+	table.topic td.replies,
+	table.topic td.views {
+		border-right: 1px solid #eee;					border-right: 0;
+		vertical-align: middle;
+	}
+	
+	.forum-registration {
+		border: 1px solid #eee;					border: 0;
+		background: #f9f9f9;					background: none;
+		padding: 18px;						padding:0;
+	}
+	
+	.forum-registration input.cat_textbox,
+	.forum-registration textarea.cat_textbox {
+		width: 260px;
+	}
+	
+	.forum-registration input.cat_button {
+		margin: 0 6px 0 0;					margin: 0;
+	}
+	
+	.forum-posts-container .breadcrumb {
+		font-size: 11px;					font-size: 100%;
+		padding: 6px;						padding:0;
+	}
+	
+	.forum-posts-container h1 {
+		font-size: 18px;					font-size: 100%;
+		margin: 18px 0;					margin: 0;
+	}
+	
+	.forum-posts-container h2 {
+		background: #eee;					background: none;
+		border: 1px solid #eee;					border: 0;
+		color: #888;						color: inherit;
+		font-size: 10px;
+		font-weight: normal;
+		margin: 0;
+		padding: 3px 18px;						padding:0;
+	}
+	
+	.forum-posts-container table.container {
+		border-collapse:collapse;
+		border-spacing:0;	
+		width: 100%;
+	}
+	
+	.forum-posts-container td {
+		background: #f9f9f9;						background: none;
+		border: 1px solid #ddd;					border: 0;
+		padding: 18px;						padding:0;
+		vertical-align: top;
+	}
+	
+	.forum-posts-container td.author {
+		font-size: 11px;					font-size: 100%;
+		width: 160px;
+	}
+	
+	.forum-posts-container h3.name {
+		color: #000;						color: inherit;
+		font-size: 12px;					font-size: 100%;
+		font-weight: bold;					font-weight: inherit;
+	}
+	
+	.forum-posts-container tr.sub td {
+		height: 30px;
+		padding: 0 18px;					padding:0;
+	}
+	
+	.forum-posts-container td.action a {
+		float: right;
+		line-height: 30px;					line-height: inherit;
+	}
+	
+/*--------------------------------------------------------------------------------------------
+	LITERATURE
+	* TODO:
+--------------------------------------------------------------------------------------------*/	
+	
+	p.literature-container img {
+		vertical-align: middle;					vertical-align: baseline;
+	}
+	
+	p.literature-container span.icon, p.literature-container span.name {
+		margin: 0 3px 0 0;					margin: 0;
+	}
+	
+	
+/*--------------------------------------------------------------------------------------------
+	SECURE ZONE MARKUP
+	* TODO:
+--------------------------------------------------------------------------------------------*/	
+	
+	.case-search {
+		background: #f9f9f9;					background: none;
+		border: 1px solid #eee;					border: 0;
+		margin: 0 0 18px;					margin: 0;
+		padding: 18px;						padding:0;
+	}
+	
+	.secure-lost-password {
+		background: #f9f9f9;					background: none;
+		border: 1px solid #eee;						border: 0;
+		padding: 18px;						padding:0;
+	}
+	
+	.secure-lost-password input.cat_textbox_small {
+		width: 210px;
+	}
+	
+	.secure-update-details {
+		background: #f9f9f9;					background: none;
+		border: 1px solid #eee;					border: 0;
+		margin: 0 0 18px;					margin: 0;
+		padding: 18px;						padding:0;
+	}
+	
+	.secure-update-details input.cat_textbox,
+	.secure-update-details select.cat_dropdown {
+		width: 260px;
+	}
+	
+	
+/*--------------------------------------------------------------------------------------------
+	FORM MODULES
+	* TODO:
+--------------------------------------------------------------------------------------------*/	
+	
+	.product-form h3 {
+		padding-left: 9px;					padding-left:0;
+	}
+	
+	.secure-login, .newsletter-form {
+		background: #f9f9f9;					background: none;
+		border: 1px solid #f2f2f2;				border: 0;
+		margin-bottom: 18px;					margin: 0;
+	}
+	
+	.secure-login h3, .newsletter-form h3 {
+		background: #eee;					background: none;
+		border-bottom: 1px solid #eee;				border-bottom: 0;
+		font-size: 14px;					font-size: 100%;
+		margin: 0;
+		padding: 6px 18px;					padding:0;
+	}
+	
+	.secure-login div.form, .newsletter-form div.form {
+		padding-left: 9px;					padding-left:0;
+	}
+	
+/*--------------------------------------------------------------------------------------------
+	SEARCH
+	* TODO:
+--------------------------------------------------------------------------------------------*/	
+	
+	.search-box {
+		padding: 6px;						padding:0;
+	}
+	
+	.search-box input.cat_textbox_small {
+		margin: 0 3px 0 0;					margin: 0;
+	}
+	
+	/* @end */
+	
+	/* @group Photo Gallery */
+	
+	#imageContainer img {
+		margin: 0;
+	}
+	
+	table.photogalleryTable td {
+		padding: 9px;						padding:0;
+	}
+	
+/*--------------------------------------------------------------------------------------------
+	AFFILIATE PROGRAM
+	* TODO:
+--------------------------------------------------------------------------------------------*/	
+	
+	table.affiliate-stats {
+		border: 1px solid #d7d7d7;				border: 0;
+		border-collapse: collapse;
+	}
+	
+	table.affiliate-stats td {
+		border: 1px solid #d7d7d7;				border: 0;
+		padding: 6px;						padding:0;
+	}
+	
+	table.affiliate-stats td.var {
+		color: #888;						color: inherit;
+	}
+	
+/*--------------------------------------------------------------------------------------------
+	TELL A FRIEND
+	* TODO:
+--------------------------------------------------------------------------------------------*/	
+	
+	.tell-a-friend {
+		border: 2px solid #333;					border: 0;
+		background-color: #fff;					background-color: transparent;					color: inherit;
+		color: #666;
+		padding: 18px;						padding:0;
+	}
+	
+	.tell-a-friend form {
+		padding: 0 0 0 36px;					padding:0;
+	}
+	
+	.tell-a-friend  h1 {
+		border-bottom: 1px solid #ccc;				border-bottom: 0;
+		color: #222;						color: inherit;
+		font-size: 18px;					font-size: 100%;
+		margin: 0;
+		padding: 0 0 6px;					padding:0;
+	}
+	
+	.tell-a-friend  h2 {
+		border-bottom: 1px dotted #ccc;				border-bottom: 0;
+		color: #222;						color: inherit;
+		font-size: 12px;					font-size: 100%;
+		margin: 18px 0 9px;					margin: 0;
+	}
+	
+	.tell-a-friend  td.var {
+		text-align: right;
+		width: 130px;
+	}
+	
+	.tell-a-friend td {
+		font-size: 11px;					font-size: 100%;
+		vertical-align: top;
+	}
+	
+	.tell-a-friend  label {
+		color: #888;						color: inherit;
+		font-size: 11px;					font-size: 100%;
+	}
+	
+	.tell-a-friend  input.cat_textbox_small {
+		height: 21px;
+	}
+	
+	.tell-a-friend  input.cat_textbox_small, .tell-a-friend textarea.cat_listbox {
+		font-size: 11px;					font-size: 100%;
+		width: 300px;
+	}
+	
+/*--------------------------------------------------------------------------------------------
+	FAVOURITES
+	* TODO:
+--------------------------------------------------------------------------------------------*/	
+	
+	.favourite-registration {
+		border: 1px solid #eee;					border: 0;
+		background: #f9f9f9;					background: none;
+		padding: 18px;						padding:0;
+	}
+	
+	.favourite-registration input.cat_textbox,
+	.favourite-registration textarea.cat_textbox {
+		width: 260px;
+	}
+	
+	.favrourite-registration input.cat_button {
+		margin: 0 6px 0 0;					margin: 0;
+	}
+	
+	
+/*--------------------------------------------------------------------------------------------
+	ECOMMERCE BROWSE PANEL
+	* TODO:
+--------------------------------------------------------------------------------------------*/	
+	
+	.browse-panel {
+		border: 1px solid #d7d7d7;					border: 0;
+	}
+	
+	.browse-panel h5 {
+		background: #eee url(/CatalystImages/shop_bg-browse-panel.png) repeat-x;					background: none;					background: none;
+		border-bottom: 1px solid #d7d7d7;					border-bottom: 0;
+		font-size: 14px;					font-size: 100%;
+		margin: 0;
+		padding: 9px;						padding:0;
+	}
+	
+	.browse-panel h6 {
+		background: #f7f7f7;					background: none;
+		font-size: 11px;					font-size: 100%;
+		font-weight: bold;					font-weight: inherit;
+		margin: 0;
+		padding: 3px 9px;						padding:0;
+	}
+	
+	.browse-panel ol {
+		background: #fff;					background: none;
+		border-bottom: 1px solid #e7e7e7;					border-bottom: 0;
+		margin: 0;
+		padding: 9px;						padding:0;
+	}
+	
+	.browse-panel ol.browse-catalogue {
+		border-bottom: none;					border-bottom: 0;
+	}
+	
+	.browse-panel li {
+		list-style: none;
+		padding: 3px 9px;						padding:0;
+	}
+	
+	.browse-panel li span {
+		display: inline;
+		font-weight: bold;					font-weight: inherit;
+	}
+	
+/*--------------------------------------------------------------------------------------------
+	ECOMMERCE ZOOM SLIDER
+	* TODO:
+--------------------------------------------------------------------------------------------*/	
+	
+	img.drag {
+		position: relative;
+		padding: 0.5em;						padding:0;
+		/*margin: 0 0 0.5em 1.5em;*/
+		margin: 0;
+		cursor: move;
+	}
+	 
+	.slidertrack {
+	    background-color: #d7d7d7;					background:none;
+	    color: #333;						color: inherit;
+	    float: left;
+	    margin: 0;
+	    line-height: 0px;
+	    font-size: 0px;					font-size: 100%;
+	    text-align: left;
+	    padding: 4px;						padding:0;
+	    border: 1px solid;					border: 0;
+	    border-color: #ccc #aaa #aaa #ccc;			border-color: transparent;
+	}
+	 
+	.slidertrack .sliderslit {
+	    background-color: #333;					background-color: transparent;
+	    color: #ccc;						color: inherit;
+	    height: 2px;
+	    margin: 4px 4px 2px 4px;					margin: 0;
+	    line-height: 0px;
+	    position: absolute;
+	    z-index: 1;
+	    border: 1px solid;					border: 0;
+	    border-color: #999 #ddd #ddd #999;			border-color: transparent;
+	}
+	 
+	.slidertrack .slider {
+	    width: 16px;
+	    background-color: #555;					background-color: transparent;
+	    color: #333;						color: inherit;
+	    position: relative;
+	    margin: 0;
+	    height: 8px;
+	    z-index: 1;
+	    line-height: 0px;
+	    font-size: 0px;					font-size: 100%;
+	    text-align: left;
+	    border: 2px solid;					border: 0;
+	    : #999 #222 #222 #999;
+	}
+	 
+	#zoomcontainer{
+	    overflow: hidden;
+	    position: relative;
+	}
+	
+	#zoomcontainer img{
+	    position: absolute;
+	}
+	
+	
+/*--------------------------------------------------------------------------------------------
+	WEB APPS
+	* TODO:
+--------------------------------------------------------------------------------------------*/	
+	
+	/*pagination*/
+	ul.pagination {
+		margin: 0;
+		padding: 0;
+	}
+	
+	ul.pagination li {
+		display: inline;
+		list-style: none;
+		margin: 0 2px;					margin: 0;
+	}
+	
+	
+	
+	
+
