@@ -1,0 +1,98 @@
+/*--------------------------------------------------------------------------------------------
+	ADOBE BUSINESS CATALYST MODULESTYLESHEET RESET SHEET - BETA
+	Resets the default "Module StyleSheet Version : 2009.08.10" served by BC.
+	
+	@GarySwanepoel
+	http://www.itbusiness.com.au
+	
+	Version: BETA v1.0
+	Updated: 200111621
+--------------------------------------------------------------------------------------------*/
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+body{line-height:1}
+ol,ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+table{border-collapse:collapse;border-spacing:0}
+.clear{visibility:hidden;display:block;clear:both;width:0;height:0;overflow:hidden}
+.blog-container .clear,.shop-catalogue.clear,.shop-product-large.clear,.shop-main.clear,.header.clear,.body.clear,.footer.clear,.shop-product-small.clear{visibility:visible;width:auto;height:auto;overflow:visible}
+form input[type=submit],input.productSubmitInput{font-weight:700;font-size:12px;font-family:helvetica;letter-spacing:.2px;border:1px solid #D7D7D7;background-color:#F9F9F9;moz-border-radius:4px;border-radius:4px;background:0;padding:3px 1em 2px}
+ul.form li label{color:inherit;display:inline}
+table.webform td{line-height:inherit;padding:0}
+.form input,.webform input{margin-right:0}
+.system-message,.system-error-message{background-color:transparent;border:0;color:inherit;min-height:inherit;margin:0;padding:0}
+.system-message h1,.system-error-message h1{color:inherit;margin:0}
+.announcement-details span.date{display:inline;font-size:100%;margin:0}
+.blog-list{background-color:transparent;border:0;color:inherit;font-size:100%;margin:0;padding:0}
+.blog-post h2.post-title{border-bottom:0;font-size:100%;margin:0;padding:0}
+.blog-container .post-list{width:50%}
+.blog-comment-container{border:0;margin:0}
+table.module-calendar td{border:0;font-size:100%;padding:0}
+table.module-calendar td span{background-color:transparent;color:inherit;display:inline;font-size:100%;text-align:inherit;padding:0}
+tr.day-of-week td{background-color:transparent;color:inherit;font-size:100%;font-weight:inherit;text-align:inherit;vertical-align:baseline}
+table.module-calendar td.events span{background-color:transparent;color:inherit;font-weight:inherit}
+table.module-calendar td ul{padding-left:0;margin:0}
+.shop-main .header{border-bottom:0;height:auto;line-height:inherit;margin:0}
+.shop-product-small{background-color:transparent;border:0;color:inherit}
+.shop-product-small h5{font-size:100%;min-height:inherit;margin:0;padding:0}
+.shop-product-large{background-color:transparent;border:0;color:inherit;margin:0}
+.shop-product-large .image{margin-left:0;padding:0}
+.poplets{border:0;margin:0;padding:0}
+table.cart{background-color:transparent;border:0;font-size:100%}
+table.cart th{background-color:transparent;border-bottom:0;color:inherit;font-size:100%}
+.productitemcell{line-height:inherit;margin:0}
+table.cart td.actions a{font-size:100%;font-weight:inherit;margin:0}
+table.border{border-right:0;border-bottom:0}
+table.border td{border-top:0;border-left:0}
+.comment-container span.rating{vertical-align:baseline;margin:0}
+.comment-form{background-color:transparent;border:0;color:inherit;margin:0;padding:0}
+table.faqresultstable{background-color:transparent;border-spacing:0;border:0}
+table.faqresultstable td.faqresultstableinfo{background-color:transparent;color:inherit;font-size:100%;padding:0}
+td.faqresultstablehead{background-color:transparent;border-bottom:0;color:inherit;font-weight:inherit}
+table.forum td.topics{border-left:0;border-right:0}
+table.forum td.lastpost{border-left:0}
+ul.cap-top,ul.cap-bottom{font-size:100%;margin:0;padding:0}
+table.topic-list{background-color:transparent;border-left:0;border-right:0}
+table.topic-list th{background-color:transparent;border:0;color:inherit;font-size:100%;padding:0}
+.forum-posts-container h2{background-color:transparent;border:0;color:inherit;padding:0}
+.forum-posts-container h3.name{color:inherit;font-size:100%;font-weight:inherit}
+p.literature-container img{vertical-align:baseline}
+.secure-login,.newsletter-form{background-color:transparent;border:0;margin-bottom:0}
+.secure-login h3,.newsletter-form h3{background-color:transparent;border-bottom:0;font-size:100%;padding:0}
+.tell-a-friend{border:0;background-color:transparent;color:inherit;padding:0}
+.tell-a-friend h1{border-bottom:0;color:inherit;font-size:100%;padding:0}
+.tell-a-friend h2{border-bottom:0;color:inherit;font-size:100%;margin:0}
+.browse-panel h5{background:none;border-bottom:0;font-size:100%;padding:0}
+.browse-panel h6{background-color:transparent;font-size:100%;font-weight:inherit;padding:0}
+.browse-panel ol{background-color:transparent;border-bottom:0;padding:0}
+img,a img,table.module-calendar,.poplets img,tr.shipping td,.shop-form li.last,table.order-list td,table.topic,table.affiliate-stats,.browse-panel{border:0}
+.clearfix:after,.blog-container > .wrapper.clear:after,.shop-catalogue.clear:after,.shop-product-large.clear:after,.shop-main.clear:after,.header.clear:after,.body.clear:after,.footer.clear:after,.shop-product-small.clear:after{visibility:hidden;display:block;clear:both;height:0;font-size:0;content:" "}
+* html .clearfix,:first-child+html .clearfix{zoom:1}
+ul.form li,.blog-container p.description,.blog-post .post-body,span.flag,.BlogTagCloud,p.page-nav a,.blog-post dd,.booking-list,.booking-list span.date,.booking-container h1,.form-container h2,.go-back,.shop-main,.shop-main .description ul,a.cartSummaryLink,.shop-main ul,table.catalogueTable,.shop-product-small .image,table.productPoplets,.shop-product-large li,.shop-cart .breadcrumbs,td.quantity input.update,.shop-form,input.PaymentMethodType,table.order-list a,table.forum .forum,ul.cap-bottom,.forum-registration input.cat_button,p.literature-container span.icon,p.literature-container span.name,.search-box input.cat_textbox_small,.favrourite-registration input.cat_button,ul.pagination li{margin:0}
+div.form div.item,div.webform div.item,div.select-month-year,table.productTable td,.shop-product-large .shop-product-small ul,table.case-list td,table.case-details td,.comment-container .content,table.faq-search td,table.topic-list td,table.topic td,.forum-posts-container tr.sub td,.search-box,table.photogalleryTable td,.tell-a-friend form,.browse-panel li{padding:0}
+.form label,.webform label,.announcement-list,.post-body .links,table.cartSummaryTable,.shop-product-small li.price,.shop-product-small li.price strong,.shop-product-small li.stock,.shop-product-large li.price,.shop-product-large li.instock,a#catshopclear,table.cart strong,.shop-form label,.shop-receipt h2,.shop-quote-receipt h2,table.order-list span.number,.forum-container h1,ul.cap-top li.actions,ul.cap-bottom li.actions,table.topic-list .replies,table.topic-list .views,table.topic-list .date,.forum-posts-container td.author,.tell-a-friend td,.tell-a-friend input.cat_textbox_small,.tell-a-friend textarea.cat_listbox{font-size:100%}
+.system-message a:link,.system-error-message a:link,.blog-list span,.blog-post dt,.shop-catalogue h4 a,.shop-product-small h4 a,.shop-product-small li.stock strong,table.cart a,table.case-details td.var,table.border span,.comment-container span.name,table.faq-search label,table.faqresultstable a,table.topic-list,div.forum-posts-container div.post-list,div.forum-registration,div.forum-posts-container div.post-list a,div.forum-registration a,div.forum-registration h2,table.topic-list a,table.affiliate-stats td.var{color:inherit}
+.ok,.error{background-color:transparent;color:inherit;margin-bottom:0}
+.announcement-list h2,.announcement-list span.date,.blog-list h2,.comment-list h5,.side-panel h4,.BlogRecentPost li,.BlogTagList li,.BlogPostArchive li,.shop-product-small ul li,.comment-form h3,.forum-posts-container h1{font-size:100%;margin:0}
+.blog-container h1,.shop-catalogue h4{font-size:100%;line-height:inherit;margin:0}
+.blog-post .post-details,.comment-form h5{color:inherit;font-size:100%;margin:0}
+.comment-list,.blog-post dl,.shop-receipt,.shop-quote-receipt,.case-search,.secure-update-details{background-color:transparent;border:0;margin:0;padding:0}
+.blog-comment-container .comment-details,.comment-container .header{background-color:transparent;font-size:100%;padding:0}
+.blog-comment-container .comment,.shop-product-small ul,.shop-product-large .details{background-color:transparent;padding:0}
+.form-container,.shop-form ul.form,.forum-posts-container td,.secure-lost-password{background-color:transparent;border:0;padding:0}
+table.module-calendar td.events,table.module-calendar td.last-month,table.module-calendar td.next-month,table.case-details tr.odd td{background-color:transparent}
+.shop-catalogue,.comment-container,table.faq-search{background-color:transparent;border:0;margin:0}
+.shop-catalogue .image,.shop-product-large .shop-product-small .image,.shop-product-large ul,.shop-form ul.form li,ul.cap-top li.actions a,ul.cap-bottom li.actions a{margin:0;padding:0}
+.shop-product-small li.quantity,ul.cap-top li,ul.cap-bottom li,.forum-posts-container td.action a{line-height:inherit}
+.shop-product-large h1,.tell-a-friend label{color:inherit;font-size:100%}
+table.cart th,table.cart td,table.faqresultstable td{color:inherit;padding:0}
+tr.val td,.browse-panel ol.browse-catalogue{border-bottom:0}
+.shop-receipt h1,.shop-quote-receipt h1,table.affiliate-stats td{border:0;padding:0}
+table.case-details,table.forum{background-color:transparent;border:0}
+table.faqresultstable td.faqresultstablecount,.product-form h3,.secure-login div.form,.newsletter-form div.form{padding-left:0}
+table.forum td,.forum-posts-container .breadcrumb{font-size:100%;padding:0}
+table.forum td.posts,table.topic td.name,table.topic td.replies,table.topic td.views{border-right:0}
+table.topic-list .name,.browse-panel li span{font-weight:inherit}
+.forum-registration,.favourite-registration{border:0;background-color:transparent;padding:0}
