@@ -25,4 +25,7 @@
 <ul>
 <li>Resolved incorrect use of .clear method and applied correct use of .clearfix</li>
 <li>Made all button styles consistent with use of image button in eCommerce template</li>
+<li>Removed all default padding & margins</li>
+<li>Reset all typography font-sizes, line-heights, colors.</li>
+<li>Allowed all inheritable elements to properly be styled from their parent objects.</li>
 </ul>
