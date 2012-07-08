@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Adobe Business Catalyst Reset Project by itbusiness</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Adobe Business Catalyst Reset Project</h1>
+        <p>Adobe Business Catalyst Module Stylesheet Reset Sheet</p>
+
+        <p class="view"><a href="https://github.com/itbusiness/Adobe-Business-Catalyst-Reset-Project">View the Project on GitHub <small>itbusiness/Adobe-Business-Catalyst-Reset-Project</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/itbusiness/Adobe-Business-Catalyst-Reset-Project/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/itbusiness/Adobe-Business-Catalyst-Reset-Project/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/itbusiness/Adobe-Business-Catalyst-Reset-Project">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1> <h1>Adobe Business Catalyst Reset Project</h1>
+</h1>
+
+<p>This project aims to reset the default style sheet served for any Adobe Business Catalyst website.</p>
+
+<p>The purpose of this is to reset all the pre-defined styles, fix incorrectly applied classes and methods and make minor changes to help to apply consistent custom styles for your own site which won't conflict with 3rd party style sheets and javascript.</p>
+
+<h2>How to use</h2>
+
+<p>Create a BC website using the "Start from scratch" option.</p>
+
+<p>Then just upload and link the latest reset style sheet inside your html file as the first CSS reference like the example below.</p>
+
+<pre>
+&lt;link href="/StyleSheets/modulestylesheets.reset.css" type="text/css" rel="StyleSheet" /&gt;
+</pre>
+
+<h2>Demo</h2>
+
+<p>A working demo is currently being finalised and will be available shortly.</p>
+
+<h2>Other Files</h2>
+
+<p>As this is still in Beta there are two other files.</p>
+
+<ul>
+<li>
+<strong>Comparison Sheet:</strong> Lists all the default styles from the BC Sheet and the new style that overrides.</li>
+<li>
+<strong>Minified Sheet:</strong> A compressed sheet. Please not this is still being tested to ensure correct compression.</li>
+</ul><h2>A little background</h2>
+
+<p>Whenever you create a new Adobe Business Catalyst website you'll notice the following line of code gets added to any HTML file you create inside BC.
+</p><pre>
+&lt;link href="/StyleSheets/ModuleStyleSheets.css" type="text/css" rel="StyleSheet" /&gt;
+</pre>
+<p>This style sheet is the default style sheet served by Business Catalyst in order to pre-style a basic BC website.</p>
+
+<p>The major issue with this is that the styles often conflict with your own custom stylesheet and many "default" styles do not reflect what you may want to appear in your website.</p>
+
+<p>There is also very little consistency in font-sizes, line-heights, margins, padding, which makes it very difficult to create a website which conforms to basic design principles and make a site look its best.</p>
+
+<h2>Components</h2>
+
+<p>The reset sheet resets all pre-defined styles to <a href="http://meyerweb.com/eric/tools/css/reset/" target="_blank">Eric Meyer's CSS Reset Sheet</a> which is a widely used stylesheet to resolve many browser inconsistencies. This has been used as the basis for much of this project but other issues and inconsistencies specific to Business Catalyst have also been addressed.</p>
+
+<h2>Current Fixes</h2>
+
+<p>To Date the following items have been addressed:</p>
+
+<ul>
+<li>Resolved incorrect use of .clear method and applied correct use of .clearfix</li>
+<li>Made all button styles consistent to match the default use of the images for the buttons in eCommerce template.</li>
+<li>Removed all default padding &amp; margins.</li>
+<li>Reset all typography font-sizes, line-heights, colours.</li>
+<li>Allowed all inheritable elements to properly inherit from their parent objects.</li>
+</ul><h2>Know Issues</h2>
+
+<p>There are still some issues being resolved in regards to CSS Specificity and still some functionality of BC that have yet to be tested such as the Forums, eCommerce Poplets, Photogallery and Dynamic Menus.</p>
+
+<p>A complete list of the status of these items will be published during the next update of the Reset Sheet.</p>
+
+<hr><p>For more information about being an <a href="http://www.itbusiness.com.au" title="Abobe Business Catalyst Partner" target="_blank">Adobe Business Catalyst Partner</a>, visit our website.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/itbusiness">itbusiness</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-6114966-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
