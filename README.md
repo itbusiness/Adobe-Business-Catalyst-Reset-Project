@@ -10,12 +10,12 @@
 &lt;link href="/StyleSheets/ModuleStyleSheets.css" type="text/css" rel="StyleSheet" /&gt;
 -->
 <h2>A little background</h2>
-<p>Whenever you create a new Adobe Business Catalyst website you'll notice the following line of code gets added to any HTML file you create inside BC.
+<p>Whenever you create a new Adobe Business Catalyst website you'll notice the following line of code gets added to any HTML file you upload.
 <pre>
 &lt;link href="/StyleSheets/ModuleStyleSheets.css" type="text/css" rel="StyleSheet" /&gt;
 </pre>
 <p>This style sheet is the default style sheet served by Business Catalyst in order to pre-style a basic website.</p>
-<p>The major issue with this is that the styles often conflict with your own custom stylesheet and many "default" styles do not relect what you may want to appear in your website.</p>
+<p>A major issue with this is that the styles often conflict with your own custom stylesheet and many "default" styles do not relect what you may want to appear in your website.</p>
 <p>There is also very little consistency in font-sizes, line-heights, margins, padding which make it very difficult to create a website which conforms to basic design principles and make a site look its best.</p>
 <h2>Components</h2>
 <p>This file resets all pre-defined styles to <a href="http://meyerweb.com/eric/tools/css/reset/" target="_blank">Eric Meyer's CSS Reset Sheet.</a></p>
@@ -28,4 +28,8 @@
 <li>Removed all default padding & margins</li>
 <li>Reset all typography font-sizes, line-heights, colors.</li>
 <li>Allowed all inheritable elements to properly be styled from their parent objects.</li>
+</ul>
+<h2>Known Issues</h2>
+<ul>
+<li>Issue with font size inheritance chains</li>
 </ul>
