@@ -39,15 +39,19 @@
 
 <p>Create a BC website using the "Start from scratch" option.</p>
 
-<p>Then just upload and link the latest reset style sheet inside your html file as the first CSS reference like the example below.</p>
+<p>Then just upload or hotlink the latest reset style sheet inside your html file as the first CSS reference like the example below.</p>
 
 <pre>
-&lt;link href="/StyleSheets/modulestylesheets.reset.css" type="text/css" rel="StyleSheet" /&gt;
+&lt;link href="/StyleSheets/modulestylesheets.normalise.css" type="text/css" rel="StyleSheet" /&gt;
 </pre>
 
 <h2>Demo</h2>
 
-<p>A working demo is currently being finalised and will be available shortly.</p>
+<p>A working demo is currently in build to test this project at <a href="http://walkthrough.businesscatalyst.com" target="_blank" title="Business Catalyst Demonstration">walkthrough.businesscatalyst.com</a></p>
+
+<h2>The Normalisation Sheet</h2>
+
+<p>This is now the preferred method to resetting a BC website. It preserves a range of default styles providing a better cross-browser consistency as well as being HTML5-ready.</p>
 
 <h2>Other Files</h2>
 
@@ -55,26 +59,50 @@
 
 <ul>
 <li>
-<strong>Comparison Sheet:</strong> Lists all the default styles from the BC Sheet and the new style that is overridden.</li>
+<strong>Reset Sheet:</strong> An alternative to normalising the styles. This will strip all styling out of your site allowing your to add your own custom base styles.</li>
 <li>
-<strong>Minified Sheet:</strong> A compressed sheet. Please not this is still being tested to ensure correct compression.</li>
+<strong>Comparison Sheet:</strong> Lists all the default styles from the BC Sheet and the new style that is overridden.</li>
 </ul><h2>A little background</h2>
 
 <p>Whenever you create a new Adobe Business Catalyst website you'll notice the following line of code gets added to any HTML file inside BC.
 </p><pre>
 &lt;link href="/StyleSheets/ModuleStyleSheets.css" type="text/css" rel="StyleSheet" /&gt;
 </pre>
-<p>This style sheet is the default style sheet served by Business Catalyst in order to pre-style a basic BC website.</p>
+<p>This style sheet is the default style sheet served by Business Catalyst in order to pre-style a basic website.</p>
 
-<p>A major issue with this is the styles often conflict with your own custom stylesheet and many "default" styles do not reflect what you may want to appear in your website.</p>
+<p>A major issue with this is that the styles often conflict with your own custom stylesheet and many "default" styles do not relect what you may want to appear in your website.</p>
 
-<p>There is also very little consistency in font-sizes, line-heights, margins, padding, which makes it very difficult to create a website which conforms to basic design principles and make a site look its best.</p>
+<p>There is also very little consistency in font-sizes, line-heights, margins, padding which make it very difficult to create a website which conforms to basic design principles and make a site look its best.</p>
 
 <h2>Components</h2>
 
-<p>The reset sheet resets all pre-defined styles to <a href="http://meyerweb.com/eric/tools/css/reset/" target="_blank">Eric Meyer's CSS Reset Sheet</a> which is a widely used stylesheet to resolve many browser inconsistencies. This has been used as the basis for much of this project but other issues and inconsistencies specific to Business Catalyst have also been addressed.</p>
+<p>There are two alternative components to this project:</p>
 
-<h2>Current Fixes</h2>
+<ul>
+<li>The Normalisation Sheet (which is now the current standard)</li>
+<li>The Reset Sheet</li>
+</ul><h3>The Normalisation Sheet</h3>
+
+<p>One of the major elements of the normalisation sheet is to preserve useful browser defaults rather than erasing them.</p>
+
+<p>This sheet is based on the work by <a href="http://nicolasgallagher.com/about-normalize-css/" rel="nofollow" target="_blank">Nicolas Gallagher</a> and <a href="http://sonspring.com/journal/formalize-css" target="_blank" rel="nofollow">Nathan Smith</a> who both have spent considerable time researching and testing cross-browser compliant styles.</p>
+
+<p>The normalisation sheet is now the preferred method for the project however the Reset Sheet will be kept as an alternative resource.</p>
+
+<h3>The Reset Sheet</h3>
+
+<p>This is an alternative approach and resets all pre-defined styles to <a href="http://meyerweb.com/eric/tools/css/reset/" target="_blank">Eric Meyer's CSS Reset Sheet.</a></p>
+
+<p>This tool is a widely used stylesheet to resolve many browser inconsistencies. This has been used as the basis for much of this project but other issues and inconsistencies specific to Business Catalyst have also been addressed.</p>
+
+<h2>Optional Components</h2>
+
+<p>We've made the decision to add a portion of our own base sheet in order provide a more mature starting point. You can remove either of these components and replace with your own base sheet.</p>
+
+<ul>
+<li>Base Typography Styles have been added</li>
+<li>Cross Broswer Form Styles have been added</li>
+</ul><h2>Current Fixes</h2>
 
 <p>To Date the following items have been addressed:</p>
 
